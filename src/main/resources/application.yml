@@ -2,8 +2,12 @@ server:
   port: 8761 # default 8761
   
 eureka:
+  instance:
+    hostname: local
   client:
     fetch-registry: false
-    register-with-eureka: false
-  instance:
-    hostname: localhost
+    register-with-eureka: false  
+
+    
+# eureka.datacenter=myname    
+# In the AWS cloud environment, pass in the java commandline property -Deureka.datacenter=cloud so that the Eureka Client/Server knows to initialize the information specific to AWS cloud.
